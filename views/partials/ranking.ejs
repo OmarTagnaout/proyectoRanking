@@ -1,0 +1,26 @@
+
+    <!-- Secciones -->
+    <section class="ranking">
+        <h2>Ranking de juegos</h2>
+        <p>Los mejores juegos de la semana</p>
+    
+        <div class="ranking-inner">
+  
+          <!-- Recorremos todos los videojuegos del JSON -->
+          <% games.forEach(g => { %>
+              <!-- Al hacer clic en cualquier parte del div, accedemos al videojuego -->
+              <a href="/game/<%= g.id %>">
+                  <div class="ranking-inner-game <%= (g.metacritic > 95)? 'top':''%>">
+                      <!-- Mostramos la imagen de cada videojuego -->
+                      <img src="<%= g.image %>" alt="<%= g.alt %>">
+                      <!-- Mostramos el título de cada videojuego -->
+                      <h5><%= g.title %></h5>
+                      <!-- Mostramos la puntuación de Metacritic -->
+                      <p>Metacritic: <%= g.metacritic %></p>
+                  </div>
+              </a>
+          <% }); %>
+      
+      </div>
+
+    </section>

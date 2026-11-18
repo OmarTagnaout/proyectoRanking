@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <!-- 
+  Incluimos el archivo header.ejs, que se encuentra dentro de la carpeta
+  partials. De esta manera podemos reutilizar la misma cabecera en todas
+  las páginas de nuestra web sin tener que repetir el código.
+-->
+   <%- include ("partials/header") %>
+
+
+
+   <%- include ("partials/ranking") %>
+  
+  
+   <%- include ("partials/footer") %>
+
+
+
+    <!-- Añadimos el script de javascript -->
+    <script src="/javascripts/app.js"></script>
+
+  </body>
+
+</html>

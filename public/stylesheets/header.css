@@ -1,0 +1,35 @@
+header.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000, #1a1a1a, #292929);
+    gap: 1rem;
+    padding: 20px;
+
+    h1 {
+        color: var(--color_titulos);
+    }
+
+    nav.menu ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+
+        li {
+            padding: 10px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: var(--color_primer_plano);
+            font-weight: bold;
+            font-family: var(--tipo_fuente);
+            transition: 0.3s;
+        }
+
+        li a:hover {
+            color: var(--color_resaltar);
+        }
+    }
+}

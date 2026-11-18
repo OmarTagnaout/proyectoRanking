@@ -1,0 +1,60 @@
+[
+ 
+  {
+    "id": "gta6",
+    "image": "https://picsum.photos/300",
+    "alt": "Grand Theft Auto VI",
+    "description": "Explora el mundo de <em>Grand Theft Auto VI</em>, una aventura de mundo abierto ambientada en el estado de Leonida. Vive una historia llena de acción, crimen y libertad junto a Jason y Lucia en una experiencia repleta de posibilidades.",
+    "title": "Grand Theft Auto VI",
+    "metacritic": 99
+  },
+  {
+    "id": "ds3",
+    "image": "https://picsum.photos/300",
+    "alt": "Dark Souls III",
+    "description": "Adéntrate en el oscuro universo de <em>Dark Souls III</em>. Enfréntate a enemigos aterradores, descubre escenarios misteriosos y supera combates desafiantes en una aventura RPG donde cada decisión y cada batalla cuentan.",
+    "title": "Dark Souls III",
+    "metacritic": 100
+  },
+  {
+    "id": "kh2",
+    "image": "https://picsum.photos/300",
+    "alt": "Kingdom Hearts II",
+    "description": "Acompaña a Sora, Donald y Goofy en <em>Kingdom Hearts II</em>, una aventura que combina los mundos de Disney con el universo de Final Fantasy. Lucha contra la oscuridad, descubre nuevos mundos y vive una historia inolvidable sobre la amistad.",
+    "title": "Kingdom Hearts II",
+    "metacritic": 98
+  },
+  {
+    "id": "eldenring",
+    "image": "https://picsum.photos/300",
+    "alt": "Elden Ring",
+    "description": "Adéntrate en las Tierras Intermedias con <em>Elden Ring</em>, un RPG de acción y mundo abierto creado por FromSoftware. Explora paisajes misteriosos, derrota enemigos poderosos, descubre secretos y conviértete en el Señor del Círculo.",
+    "title": "Elden Ring",
+    "metacritic": 96
+  },
+  {
+    "id": "eafc27",
+    "image": "https://picsum.photos/300",
+    "alt": "EA Sports FC 27",
+    "description": "Vive la emoción del fútbol con <em>EA Sports FC 27</em>. Construye tu equipo ideal, compite con clubes y selecciones de todo el mundo y disfruta de una experiencia futbolística con diferentes modos de juego.",
+    "title": "EA Sports FC 27",
+    "metacritic": 85
+  },
+  {
+    "id": "rdr2",
+    "image": "https://picsum.photos/300",
+    "alt": "Red Dead Redemption 2",
+    "description": "Viaja al salvaje oeste con <em>Red Dead Redemption 2</em>. Ponte en la piel de Arthur Morgan, un forajido que lucha por sobrevivir junto a su banda mientras explora un enorme mundo abierto lleno de aventuras, peligros y decisiones.",
+    "title": "Red Dead Redemption 2",
+    "metacritic": 97
+  },
+  {
+    "id": "thewitcher3",
+    "image": "https://picsum.photos/300",
+    "alt": "The Witcher 3 Wild Hunt",
+    "description": "Conviértete en Geralt de Rivia en <em>The Witcher 3: Wild Hunt</em>, un RPG de mundo abierto lleno de monstruos, magia y decisiones difíciles. Explora un universo fantástico y busca a Ciri mientras descubres historias inolvidables.",
+    "title": "The Witcher 3: Wild Hunt",
+    "metacritic": 93
+  }
+
+]

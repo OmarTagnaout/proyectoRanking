@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <!-- 
+  aqui ya el game.ejs tendrá lo mismo que la pagina index pero en vez del ranking pues el game.title
+-->
+   <%- include ("partials/header") %>
+
+
+
+   <h1><%= game.title %></h1>
+  
+  
+   <%- include ("partials/footer") %>
+
+
+
+    <!-- Añadimos el script de javascript -->
+    <script src="/javascripts/app.js"></script>
+
+  </body>
+
+</html>
+
+
+

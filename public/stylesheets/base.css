@@ -1,0 +1,6 @@
+body{
+    background-color: var(--colorfondo);
+    color: var(--color_titulos);
+    font-family: var(--tipo_fuente);
+}
+
