@@ -39,6 +39,14 @@
     "description": "Vive la emoción del fútbol con <em>EA Sports FC 27</em>. Construye tu equipo ideal, compite con clubes y selecciones de todo el mundo y disfruta de una experiencia futbolística con diferentes modos de juego.",
     "title": "EA Sports FC 27",
     "metacritic": 85
-  }
+  },
+  {
+    "id": "fortnite",
+    "image": "https://static.wikia.nocookie.net/fortnite/images/a/ae/Fortnite_%28Update_v28.00%29_-_Cover_Art_-_Fortnite.jpg/revision/latest?cb=20231203094112",
+    "alt": "Fortnite",
+    "description": "Sumérgete en <em>Fortnite</em>, el popular videojuego de Epic Games. Construye, explora y lucha por ser el último jugador en pie. Disfruta de diferentes modos de juego, eventos especiales y contenido que se renueva constantemente.",
+    "title": "Fortnite",
+    "metacritic": 81
+}
 
 ]
