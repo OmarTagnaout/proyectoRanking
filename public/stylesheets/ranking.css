@@ -6,14 +6,11 @@
 
     display: grid;
     /* Activamos CSS Grid para organizar la sección. */
-
     grid-template-columns: 1fr;
     /* Una columna para colocar los elementos
        uno debajo de otro. */
-
     gap: 2rem;
     /* Separamos los elementos de la sección. */
-
     justify-items: stretch;
     /* Centramos horizontalmente los elementos. */
 
@@ -64,10 +61,6 @@
         text-decoration: none;
     }
 
-    /* ==========================================
-       CUADRÍCULA DE VIDEOJUEGOS
-       ========================================== */
-
        div.ranking-inner {
 
         display: grid;
@@ -89,10 +82,6 @@
         box-sizing: border-box;
         /* Evita problemas con el cálculo de anchuras. */
     }
-
-    /* ==========================================
-       TARJETAS INDIVIDUALES
-       ========================================== */
 
     figure.ranking-inner-game {
 
