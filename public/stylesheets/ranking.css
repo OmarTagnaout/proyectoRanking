@@ -1,9 +1,22 @@
-section.ranking {
+/* ==========================================
+   SECCIÓN DEL RANKING
+   ========================================== */
 
-    display: flex;
-    flex-direction: column;
+   section.ranking {
+
+    display: grid;
+    /* Activamos CSS Grid para organizar la sección. */
+
+    grid-template-columns: 1fr;
+    /* Una columna para colocar los elementos
+       uno debajo de otro. */
+
     gap: 2rem;
-    align-items: center;
+    /* Separamos los elementos de la sección. */
+
+    justify-items: stretch;
+    /* Centramos horizontalmente los elementos. */
+
     min-width: 100%;
     max-width: var(--ancho_pagina);
     margin: 0 auto;
@@ -21,7 +34,7 @@ section.ranking {
     Resaltamos las tarjetas que pertenecen al TOP
     con una sombra amarilla.
     */
-    div.ranking-inner-game.top {
+    figure.ranking-inner-game.top {
         box-shadow: 0 0 5px 1px yellow;
     }
 
@@ -30,7 +43,7 @@ section.ranking {
     position: absolute permite colocar la etiqueta en la esquina.
     pointer-events: none evita que interfiera con los clics.
     */
-    div.ranking-inner-game.top::after {
+    figure.ranking-inner-game.top::after {
         content: 'TOP';
         display: block;
         position: absolute;
@@ -47,24 +60,62 @@ section.ranking {
     Seleccionamos los enlaces <a> que contienen una tarjeta TOP.
     :has() permite seleccionar un padre según su contenido.
     */
-    a:has(div.ranking-inner-game.top) {
+    a:has(figure.ranking-inner-game.top) {
         text-decoration: none;
     }
 
-    div.ranking-inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    /* ==========================================
+       CUADRÍCULA DE VIDEOJUEGOS
+       ========================================== */
+
+       div.ranking-inner {
+
+        display: grid;
+        /* Activamos CSS Grid para organizar las tarjetas. */
+    
+        grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+        /* Creamos columnas de 300px.
+           Se generan tantas columnas como quepan horizontalmente. */
+    
         gap: 2rem;
+        /* Separación entre tarjetas. */
+    
+        justify-content: center;
+        /* Centramos las tarjetas dentro del contenedor. */
+    
+        width: 100%;
+        /* El contenedor ocupa todo el ancho disponible. */
+    
+        box-sizing: border-box;
+        /* Evita problemas con el cálculo de anchuras. */
     }
 
-    div.ranking-inner-game {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    /* ==========================================
+       TARJETAS INDIVIDUALES
+       ========================================== */
+
+    figure.ranking-inner-game {
+
+        display: grid;
+        /* Activamos Grid dentro de cada tarjeta. */
+
+        grid-template-columns: 1fr;
+        /* Una columna para imagen, título y puntuación. */
+
+        justify-items: center;
+        /* Centramos horizontalmente el contenido. */
+
         gap: 1rem;
-        width: var(--ancho_tarjeta);
+        /* Separamos los elementos de la tarjeta. */
+
+        width: 100%;
+        box-sizing: border-box;
+        /* Evita que padding y bordes aumenten
+           el ancho total de la tarjeta. */
+
+        margin: 0;
         padding: 1rem;
+
         background: linear-gradient(145deg, #222, #111);
         border: 1px solid #444;
         border-radius: 10px;
@@ -80,7 +131,7 @@ section.ranking {
         /*
         El símbolo & representa al selector padre.
         &:hover equivale a:
-        div.ranking-inner-game:hover
+        figure.ranking-inner-game:hover
 
         Aplicamos estos estilos cuando pasamos el ratón
         por encima de la tarjeta.
@@ -88,7 +139,6 @@ section.ranking {
         &:hover {
             transform: scale(1.05);
             border-color: var(--color_resaltar);
-            transition: 0.3s;
         }
 
         transition: 0.3s;

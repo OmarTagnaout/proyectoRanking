@@ -1,20 +1,37 @@
 header.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #000, #1a1a1a, #292929);
-    gap: 1rem;
-    padding: 20px;
+
+            display: grid;
+            /* Activamos Grid en la cabecera. */
+
+            grid-template-columns: 1fr;
+            /* Una columna para colocar el título y el menú
+            uno debajo del otro. */
+
+            justify-items: center;
+            /* Centramos horizontalmente el título y el menú. */
+
+            gap: 1rem;
+            /* Separamos el título del menú. */
+
+            background: linear-gradient(135deg, #000, #1a1a1a, #292929);
+            padding: 20px;
 
     h1 {
         color: var(--color_titulos);
     }
 
     nav.menu ul {
-        display: flex;
+
+                display: grid;
+                /* Convertimos la lista de navegación en una cuadrícula. */
+
+                grid-auto-flow: column;
+                /* Colocamos los elementos de la lista horizontalmente,
+                creando una columna para cada enlace. */
+
         list-style: none;
         gap: 2rem;
+        /* Espacio entre los enlaces del menú. */
 
         li {
             padding: 10px;

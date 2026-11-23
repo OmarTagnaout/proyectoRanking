@@ -1,6 +1,19 @@
-body{
+body {
     background-color: var(--colorfondo);
     color: var(--color_titulos);
     font-family: var(--tipo_fuente);
-}
 
+    display: grid;
+    /* Activamos Grid para organizar las grandes
+       zonas de la página web. */
+
+    grid-template-rows: auto 1fr auto;
+    /* Tres filas:
+       1. Cabecera: altura automática.
+       2. Contenido principal: ocupa el espacio restante.
+       3. Footer: altura automática. */
+
+    min-height: 100vh;
+    /* La página tendrá como mínimo la altura completa
+       de la ventana del navegador. */
+}
