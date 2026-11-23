@@ -17,3 +17,6 @@ body {
     /* La página tendrá como mínimo la altura completa
        de la ventana del navegador. */
 }
+* {
+    box-sizing: border-box;
+}
