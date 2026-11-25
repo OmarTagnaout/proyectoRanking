@@ -141,3 +141,14 @@ y limitamos su anchura.
     }
 
 }
+
+a.volver-ranking {
+    color: var(--color_primer_plano);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        color: var(--color_resaltar);
+    }
+}
