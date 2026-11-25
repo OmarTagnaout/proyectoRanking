@@ -38,4 +38,15 @@ router.get('/game/:id', function(req, res, next){
 
 });
 
+
+
+/*
+GET formulario de alta
+*/
+router.get('/games/create', (req, res) => {
+  res.render('new');
+});
+
+
+
 module.exports = router;

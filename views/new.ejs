@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Alta de videojuego</title>
+
+    <!-- Estilos generales de la web -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <!-- Estilos específicos del formulario -->
+    <link rel='stylesheet' href='/stylesheets/form.css' />
+
+</head>
+
+<body>
+
+    <!-- Incluimos la cabecera reutilizable. -->
+    <%- include ("partials/header") %>
+
+
+        <!--
+    Creamos una sección para el formulario de alta.
+    -->
+        <section class="alta">
+
+            <h2>Añadir nuevo videojuego</h2>
+
+            <!--
+      El formulario utiliza POST para enviar los datos
+      al servidor y guardar el nuevo videojuego.
+      -->
+            <form action="/games" method="POST">
+
+                <!-- ID del videojuego -->
+                <label for="id">Identificador:</label>
+                <input type="text" id="id" name="id" title="Introduce un identificador para el videojuego"
+                    placeholder="Ejemplo: game01" minlength="1" maxlength="30" required>
+
+
+                <!-- Título del videojuego -->
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" title="Introduce el título del videojuego"
+                    placeholder="Nombre del videojuego" minlength="2" maxlength="100" required>
+
+
+                <!-- Categoría del videojuego -->
+                <label for="categoria">Category:</label>
+                <select id="categoria" name="categoria" title="Select the video game category" required>
+                    <option value="">Select a category</option>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="sports">Sports</option>
+                    <option value="rpg">RPG</option>
+                    <option value="mmorpg">MMORPG</option>
+                    <option value="strategy">Strategy</option>
+                    <option value="simulation">Simulation</option>
+                    <option value="platformer">Platformer</option>
+                    <option value="horror">Horror</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="racing">Racing</option>
+                    <option value="puzzle">Puzzle</option>
+                    <option value="fighting">Fighting</option>
+                </select>
+
+
+                <!-- Descripción del videojuego -->
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" title="Introduce una descripción del videojuego"
+                    placeholder="Describe el videojuego..." minlength="10" maxlength="1000" rows="5"
+                    required></textarea>
+
+
+                <!-- URL de la imagen -->
+                <label for="image">Imagen:</label>
+                <input type="url" id="image" name="image" title="Introduce la URL de la imagen del videojuego"
+                    placeholder="https://ejemplo.com/imagen.jpg">
+
+
+                <!-- Puntuación Metacritic -->
+                <label for="metacritic">Nota Metacritic:</label>
+                <input type="number" id="metacritic" name="metacritic" title="Introduce la puntuación Metacritic"
+                    placeholder="Entre 0 y 100" min="0" max="100" step="1" required>
+
+
+                <!-- Botón para enviar el formulario -->
+                <button type="submit">Guardar videojuego</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Incluimos el footer reutilizable. -->
+        <%- include ("partials/footer") %>
+
+
+            <!-- Añadimos el script de javascript. -->
+            <script src="/javascripts/app.js"></script>
+
+</body>
+
+</html>
