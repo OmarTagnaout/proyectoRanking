@@ -1,31 +1,44 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
- 
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<head>
+    <title><%= game.title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
 
-    <!-- 
-  aqui ya el game.ejs tendrá lo mismo que la pagina index pero en vez del ranking pues el game.title
--->
-   <%- include ("partials/header") %>
+<body>
 
+    <!-- Incluimos la cabecera -->
+    <%- include("partials/header") %>
 
+    <!-- Página individual del videojuego -->
+    <section class="game">
 
-   <h1><%= game.title %></h1>
-  
-  
-   <%- include ("partials/footer") %>
+        <!-- Mostramos el título del videojuego -->
+        <h2><%= game.title %></h2>
 
+        <!-- Mostramos la imagen del videojuego -->
+        <img src="<%= game.image %>" alt="<%= game.alt %>">
 
+        <!-- Mostramos la descripción -->
+        <p><%- game.description %></p>
 
-    <!-- Añadimos el script de javascript -->
-    <script src="/javascripts/app.js"></script>
+        <!-- Mostramos la categoría -->
+        <p>Category: <%= game.categoria %></p>
 
-  </body>
+        <!-- Mostramos la puntuación de Metacritic -->
+        <p>Metacritic: <%= game.metacritic %></p>
 
+        <!-- Mostramos la posición en el ranking -->
+        <p>Ranking: <%= game.ranking %></p>
+
+        <!-- Enlace para volver al ranking -->
+        <a href="/">Volver al ranking</a>
+
+    </section>
+
+    <!-- Incluimos el footer -->
+    <%- include("partials/footer") %>
+
+</body>
 </html>
-
-
-

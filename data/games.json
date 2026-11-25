@@ -1,5 +1,4 @@
 [
- 
   {
     "id": "gta6",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5khPPzt3d2PMoieisgqD_7PaZsOtuJaX6HIydESCjz-uc9J3FsieY6Oz5&s=10",
@@ -47,6 +46,15 @@
     "description": "Sumérgete en <em>Fortnite</em>, el popular videojuego de Epic Games. Construye, explora y lucha por ser el último jugador en pie. Disfruta de diferentes modos de juego, eventos especiales y contenido que se renueva constantemente.",
     "title": "Fortnite",
     "metacritic": 81
-}
-
+  },
+  {
+    "id": "hollow-knight",
+    "ranking": null,
+    "categoria": "action",
+    "image": "https://m.media-amazon.com/images/M/MV5BMGIyYmJmZDgtOWQ1Ny00NDFiLTk2OTgtM2Q2ZWQ4OWIxZjg3XkEyXkFqcGc@._V1_.jpg",
+    "alt": "Cover art for Hollow Knight",
+    "title": "Hollow Knight",
+    "description": "juegazo de los buenos",
+    "metacritic": 99
+  }
 ]

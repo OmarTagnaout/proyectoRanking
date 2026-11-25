@@ -66,9 +66,7 @@ function saveGame(datos) {
   };
 
   games.push(juego);
-
   saveGames(games);
-
   return juego;
 }
 
