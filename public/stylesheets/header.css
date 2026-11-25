@@ -1,20 +1,21 @@
+
 header.header {
 
-            display: grid;
-            /* Activamos Grid en la cabecera. */
+    display: grid;
+    /* Activamos Grid en la cabecera. */
 
-            grid-template-columns: 1fr;
-            /* Una columna para colocar el título y el menú
-            uno debajo del otro. */
+    grid-template-columns: 1fr;
+    /* Una columna para colocar el título y el menú
+       uno debajo del otro. */
 
-            justify-items: center;
-            /* Centramos horizontalmente el título y el menú. */
+    justify-items: center;
+    /* Centramos horizontalmente el título y el menú. */
 
-            gap: 1rem;
-            /* Separamos el título del menú. */
+    gap: 1rem;
+    /* Separamos el título del menú. */
 
-            background: linear-gradient(135deg, #000, #1a1a1a, #292929);
-            padding: 20px;
+    background: linear-gradient(135deg, #000, #1a1a1a, #292929);
+    padding: 20px;
 
     h1 {
         color: var(--color_titulos);
@@ -22,15 +23,18 @@ header.header {
 
     nav.menu ul {
 
-                display: grid;
-                /* Convertimos la lista de navegación en una cuadrícula. */
+        display: grid;
+        /* Convertimos la lista de navegación en una cuadrícula. */
 
-                grid-auto-flow: column;
-                /* Colocamos los elementos de la lista horizontalmente,
-                creando una columna para cada enlace. */
+        grid-auto-flow: row;
+        /* Colocamos los elementos de la lista uno debajo del otro
+           para adaptar el menú a las pantallas de móvil. */
+
+        justify-items: center;
+        /* Centramos los enlaces horizontalmente. */
 
         list-style: none;
-        gap: 2rem;
+        gap: 1rem;
         /* Espacio entre los enlaces del menú. */
 
         li {
@@ -49,4 +53,43 @@ header.header {
             color: var(--color_resaltar);
         }
     }
+}
+
+
+/*
+DISEÑO RESPONSIVE - TABLET
+
+Se aplica siempre el diseño del header,
+pero cuando el tamaño de la pantalla es mayor
+o igual a 600px, cambiamos la disposición del menú.
+
+Los enlaces pasan a colocarse horizontalmente.
+*/
+
+@media (min-width: 600px) {
+
+    header.header nav.menu ul {
+
+        grid-auto-flow: column;
+        /* Colocamos Inicio, Ranking y Juegos
+           uno al lado del otro. */
+
+        gap: 2rem;
+        /* Aumentamos la separación entre los enlaces. */
+
+    }
+
+}
+
+
+/*
+DISEÑO RESPONSIVE - ORDENADOR
+
+Cuando el tamaño de la pantalla es mayor
+o igual a 1000px mantenemos el menú horizontal
+y centrado, sin necesidad de modificar nada más.
+*/
+
+@media (min-width: 1000px) {
+
 }

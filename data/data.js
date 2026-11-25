@@ -4,36 +4,78 @@ const fs = require('fs');
 const path = require('path');
 
 const dataDir = path.join(__dirname);
+const RUTA = path.join(dataDir, 'games.json');
+
+
+
+
 
 /**
- * Reads and returns the content of games.json
- * @returns {Array} Array of game objects
- */
-
-/**
- * Creamos una plantilla JSON (games.json) donde almacenamos
- * la información de los videojuegos: identificador, imagen,
- * descripción, título y puntuación de Metacritic.
- * Estos datos se leen para mostrarlos posteriormente en la web.
+ * Lee todos los juegos de games.json
  */
 function getGames() {
-  const raw = fs.readFileSync(path.join(dataDir, 'games.json'), 'utf8');
+  const raw = fs.readFileSync(RUTA, 'utf8');
   return JSON.parse(raw);
 }
 
+
+
+
+
 /**
- * Returns a single game by its id
- * @param {string} id Game identifier
- * @returns {Object|undefined} Matching game object
+ * Busca un juego por su ID
  */
 function getGameById(id) {
   return getGames().find(game => game.id === id);
 }
 
-module.exports = { getGames, getGameById };
 
 
- 
-module.exports = { getGames, getGameById };
+
+
+/**
+ * Guarda el array completo de juegos en games.json
+ */
+function saveGames(games) {
+  fs.writeFileSync(RUTA, JSON.stringify(games, null, 2) + '\n');
+}
+
+
+
+
+
+/**
+ * Añade un juego nuevo al JSON
+ */
+function saveGame(datos) {
+  const games = getGames();
+
+  const ranking = games.length
+    ? Math.max(...games.map(juego => juego.ranking)) + 1
+    : 1;
+
+  const juego = {
+    id: datos.id,
+    ranking,
+    categoria: datos.categoria,
+    image: datos.image || `https://picsum.photos/seed/${datos.id}/400/500`,
+    alt: `Cover art for ${datos.title}`,
+    title: datos.title,
+    description: datos.description || '',
+    metacritic: Number(datos.metacritic)
+  };
+
+  games.push(juego);
+
+  saveGames(games);
+
+  return juego;
+}
+
+
+
+
+
+module.exports = { getGames, getGameById, saveGames, saveGame };
  
  

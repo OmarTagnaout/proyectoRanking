@@ -1,19 +1,24 @@
-   section.ranking {
+  
+section.ranking {
 
     display: grid;
     /* Activamos CSS Grid para organizar la sección. */
+
     grid-template-columns: 1fr;
     /* Una columna para colocar los elementos
        uno debajo de otro. */
+
     gap: 2rem;
     /* Separamos los elementos de la sección. */
+
     justify-items: stretch;
     /* Centramos horizontalmente los elementos. */
+
     text-align: center;
     /* Centramos el texto. */
 
     width: 100%;
-box-sizing: border-box;
+    box-sizing: border-box;
     max-width: var(--ancho_pagina);
     margin: 0 auto;
     padding: 2rem;
@@ -60,22 +65,24 @@ box-sizing: border-box;
         text-decoration: none;
     }
 
-       div.ranking-inner {
+    div.ranking-inner {
 
         display: grid;
         /* Activamos CSS Grid para organizar las tarjetas. */
-    
-        grid-template-columns: 300px 300px 300px;
-        /* Creamos columnas de 300px.
-           Se generan tantas columnas como quepan horizontalmente. */
+
+        grid-template-columns: 1fr;
+        /* Creamos una columna para las tarjetas.
+           Empezamos con el diseño para móvil (Mobile First). */
+
         gap: 2rem;
         /* Separación entre tarjetas. */
+
         justify-content: center;
         /* Centramos las tarjetas dentro del contenedor. */
-    
+
         width: 100%;
         /* El contenedor ocupa todo el ancho disponible. */
-    
+
         box-sizing: border-box;
         /* Evita problemas con el cálculo de anchuras. */
     }
@@ -141,4 +148,48 @@ box-sizing: border-box;
             font-weight: normal;
         }
     }
+}
+
+
+/*
+DISEÑO RESPONSIVE - TABLET
+
+Lo que hace es lo siguiente:
+se aplica siempre lo del ranking pero si el tamaño
+de la pantalla es mayor o igual a 600px se aplica esto.
+
+Esto es porque voy a trabajar siempre para móvil
+y cuando paso de 600px aplico el media query.
+*/
+
+@media (min-width: 600px) {
+
+    section.ranking div.ranking-inner {
+
+        grid-template-columns: repeat(2, 1fr);
+        /* Creamos dos columnas para mostrar las tarjetas
+           una al lado de la otra. */
+
+    }
+
+}
+
+
+/*
+DISEÑO RESPONSIVE - ORDENADOR
+
+Cuando el tamaño de la pantalla es mayor o igual
+a 1000px, aplicamos tres columnas.
+*/
+
+@media (min-width: 1000px) {
+
+    section.ranking div.ranking-inner {
+
+        grid-template-columns: repeat(3, 1fr);
+        /* Creamos tres columnas para mostrar más tarjetas
+           y aprovechar el espacio de la pantalla. */
+
+    }
+
 }
